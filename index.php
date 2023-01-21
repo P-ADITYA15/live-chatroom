@@ -1,110 +1,124 @@
-
-<!doctype html>
-<html lang="en" class="h-100">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.108.0">
-    <title>ChatRoom</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+    <script>
+      function hidePassword() {
+        let password = document.getElementsByClassName("password");
+        password = password[0];
+        if (password.type === "password") {
+          password.type = "text";
+        } else {
+          password.type = "password";
         }
       }
+    </script>
+    <title>Attendance</title>
+    <style>
+        body{
+    padding : 0;
+    margin : 0;
+    background-color: rgba(232,251,255,255);
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight :bold;
+}
 
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    </style>
-
+.flexbox{
+    padding-top : 10vh;
+    height: 60vh;
+    width: 200vw;
+    margin-left: -50%;
+       
+    display: flex; 
+    justify-content :space-evenly;
+    align-items :center;
+    flex-direction : column;
     
-    <!-- Custom styles for this template -->
-    <link href="css.css" rel="stylesheet">
+}
+.logo{
+    height: 100px;
+    width: 115px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.login-box{
+    border: solid rgba(49,43,98,255) 2px;
+    border-radius: 20px;
+    display : flex;
+    flex-direction: column;
+    height: 50%;   
+    width : 20%;
+    padding : 10px;
+    justify-content: space-evenly;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.show-password{
+    font-size: small;
+    font-weight: normal;
+}
+.login-button-container{
+    display: flex;
+    justify-content : center;
+}
+.login-button{
+    width: 10em;
+    background-color: rgba(49,43,98,255) ;
+    color : white;
+    border-radius : 20px;
+}
+
+.login-button:hover{
+    transform : scale(1.1) translateY(-2px);
+    cursor: pointer;
+}
+
+.login-button:active{
+    opacity: .9;
+}
+</style>
   </head>
-  <body class="d-flex h-100 text-center text-bg-dark">
-    
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">ChATrOoM</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-        <a class="nav-link fw-bold py-1 px-0" href="contact.php">Contact</a>
-      </nav>
+  <body>
+    <div class="flexbox">
+      <img class="logo" src="nhce.jpeg" alt="image not found" />
+      <div class="login-box">
+        <label>Username</label>
+        <input type="text" placeholder="Enter username" required />
+        <label>Password</label>
+        <input
+          class="password"
+          type="password"
+          id="c"
+          placeholder="Enter password"
+          required
+        />
+        <div class="show-password">
+          <input type="checkbox" onclick="hidePassword()" />
+          <label>show password</label>
+        </div>
+        <div class="login-button-container">
+          <button onclick="check()" class="login-button">login</button>
+        </div>
+      </div>
     </div>
-  </header>
-
-  <main class="px-3">
-    <h1>Chat Anonymously</h1>
-    <p class="lead">Ezzzy to use , Enter your chat room name and create and share the link with whom u wanna hangout</p>
-    <p class="lead">
-  
-     
-    </p>
-  </main>
-  <form action="claim.php"  method="post">
-    myanonymouschat.com/  <input type="text" name="room">
-    <button><a class="btn btn-lg btn-light fw-bold border-white bg-white">Create</a></button>
-    </form>
-    <footer class="mt-auto text-white-50">
-    <p>Created by <a href="https://getbootstrap.com/" class="text-white">Sony</a>, by <a href="https://twitter.com/mdo" class="text-white">@adi</a>.</p>
-  </footer>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-
-
-    
+    <script>
+      function check() {
+        let pass = document.getElementById("c").value;
+        console.log(pass);
+        if (pass == "admin@123") {
+          window.location = "main.php";
+          console.log("ok");
+        } else {
+          alert("Wrong password !!");
+        }
+      }
+    </script>
   </body>
 </html>
