@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -64,8 +64,13 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-     
-      
+      p{
+        color:black;
+      }
+      h5{
+        background-image: radial-gradient( circle farthest-corner at 32.7% 82.7%,  rgba(173,0,171,1) 8.3%, rgba(15,51,92,1) 79.4% );
+        box-shadow: 0 0 10px 5px rgb(0, 0, 0);
+      }
     </style>
 
     
@@ -79,35 +84,57 @@
     <div>
       <h3 class="float-md-start mb-0">ChATrOoM</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="features.php">Features</a>
+        <a class="nav-link fw-bold py-1 px-0" href="main.php">Home</a>
+        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Features</a>
         <a class="nav-link fw-bold py-1 px-0" href="contact.php">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="px-3">
-    <h1>Chat Anonymously</h1>
-    <p class="lead">Ezzzy to use , Enter your chat room name and create and share the link with whom u wanna hangout</p>
-    <p class="lead">
-  
-     
-    </p>
+    <br>
+  <div class="card-group">
+  <div class="card">
+    <img src="ds.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Demon Slayer</h5>
+      <p class="card-text">When will Demon Slayer season 3 be released? Demon Slayer season 3 will start airing in Japan in April 2023. </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 1 day ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="aot.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">AOT</h5>
+      <p class="card-text">The just-announced release date for Attack on Titan's final season Part 3 is March 4, 2023, just under two months from now.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 2 days ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="opm.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">One Punch Man </h5>
+      <p class="card-text">The third season was officially announced on August 17, 2022. Therefore, we can expect One Punch Man Season 3 to release in September 2023.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 2 days ago</small>
+    </div>
+  </div>
+</div>
   </main>
-  <form action="claim.php"  method="post">
-    <i>Room Name</i>  <input type="text" name="room"><br><br>
-    <button class="tn btn-secondary btn-sm">Create</a></button>
-    </form>
-    <footer class="mt-auto text-white-50">
-    <p>Created by <a href="#" class="text-white">Sony</a>, by <a href="https://www.instagram.com/aditya__sony/?igshid=NmQ2ZmYxZjA%3D" class="text-white">@adi</a>.</p>
+
+  <footer class="mt-auto text-white-50">
+    <p>Created by <a href="https://getbootstrap.com/" class="text-white">Sony</a>, by <a href="https://twitter.com/mdo" class="text-white">@adi</a>.</p>
   </footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 
     
   </body>
